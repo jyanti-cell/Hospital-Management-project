@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registry</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Hospital Patient Registration Form</h1>
+    <form action="/register" method="POST">
+        <label>Patient Name</label>
+        <input type="text" name="patientName" required>
+        
+        <label>Patient Age</label>
+        <input type="number" name="patientAge" required>
+        
+        <label>Contact Number</label>
+        <input type="tel" name="contactNo" required>
+        
+        <label>Date of Admission</label>
+        <input type="date" name="admissionDate" required>
+        
+        <label>Illness Name</label>
+        <input type="text" name="illness" required>
+        
+        <button type="submit">Register Patient</button>
+    </form>
+    <br>
+    <a class="view-link" href="/students">View Registered Patients</a>
+</body>
+</html>

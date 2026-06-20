@@ -1,0 +1,4 @@
+Name:suman, Age: 23, Contact: 998765432, Date: 2026-06-03, Illness: dengue
+Name:ritika, Age: 21, Contact: 897656743, Date: 2026-05-14, Illness: viral fever
+Name:bhavya, Age: 28, Contact: 8877965478, Date: 2026-02-19, Illness: liver disease
+Name:diya, Age: 12, Contact: 3344556677, Date: 2026-06-18, Illness: fever
