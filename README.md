@@ -1,76 +1,220 @@
-# 🏥 Hospital Patient Registry System ✨
+# 🏥 Hospital Management System
 
-A modern take on healthcare administration dashboards. This full-stack web application completely replaces traditional, outdated, and clunky hospital forms with a fluid, futuristic glassmorphic user interface. 
+A Hospital Patient Registry System developed using **Node.js, Express.js, MongoDB, Mongoose, HTML, and CSS**.
 
-Built on top of a **Node.js** and **Express** architectural layer, this system enables medical personnel to quickly onboard incoming patients, save records directly to a secure server log, and audit registry histories in real-time through an intuitive dashboard.
-
----
-
-### 🚀 Performance & Core Features
-
-* **🔮 High-Fidelity Glassmorphic UI:** Features a beautifully blurred, semi-transparent card layout centered over an active 15-second fluid keyframe gradient loop (`#ff007f` → `#7428ca` → `#00dfd8`).
-* **📦 Lightweight Flat-File Database:** Eliminates heavy database management server configurations by deploying an instant, zero-latency local logging ecosystem (`patient_registry.txt`) powered natively by Node's `fs` layer.
-* **🛡 Native Field Validation:** Implements strict frontend constraint parameters for essential credentials—including Full Name, Age, Contact Numbers, Admission Dates, and Illness Category—blocking empty payload dispatches.
-* **📂 Thread-Safe Append Streams:** Every form submission initiates a non-destructive synchronous file write that appends new telemetry on clean data lines without corrupting existing historic blocks.
-* **⚡ Ultra-Responsive UX Hooks:** Features dynamic scale transitions on clickable triggers, clean focus rings on user inputs, and immediate keyboard listeners matching standard `Enter` key form submissions.
+This project was initially developed using a local text file (`patient_registry.txt`) for storing patient records. As per the updated project requirement, the storage system has been migrated to **MongoDB**, making the application more secure, scalable, and database-driven.
 
 ---
 
-### 📂 Repository Blueprint & File Structure
+# 📌 Project Overview
 
-This repository is structurally split into cleanly divided frontend layouts and backend runtime modules:
+The Hospital Management System allows hospital staff to register patient details through a web interface and store them permanently in a MongoDB database.
 
-```text
-├── index.html              # The primary capture view layout mapping form elements
-├── style.css               # The styling core running linear filters, shadows, and animations
-├── server.js               # The Express engine serving directories and handling file system calls
-├── patient_registry.txt    # Flat-file operational database archiving registration blocks
-├── package.json            # Manifest file declaring metadata, configurations, and scripts
-├── package-lock.json       # Structural snapshot tracking precise dependency trees
-└── node_modules/           # Generated ecosystem containing all underlying node packages
+The application also provides a feature to fetch and display all registered patients directly from the database.
+
+---
+
+# 🔄 Project Migration
+
+### Previous Version
+
+The first version of this project stored patient records using:
+
+- Node.js File System (fs)
+- patient_registry.txt
+
+Data was appended into a text file after every patient registration.
+
+---
+
+### Updated Version
+
+The project has now been upgraded to use:
+
+- MongoDB
+- Mongoose
+- Dotenv (.env)
+
+Patient information is now stored inside a MongoDB collection instead of a text file.
+
+---
+
+# ✅ Changes Made
+
+- Replaced File System (fs) with MongoDB
+- Added Mongoose for database operations
+- Added MongoDB Connection
+- Added Environment Variables using `.env`
+- Added `.gitignore` to hide sensitive credentials
+- Removed dependency on `patient_registry.txt`
+- Implemented Fetch operation using MongoDB (`Patient.find()`)
+
+---
+
+# ✨ Features
+
+- Register New Patient
+- Store Patient Details in MongoDB
+- View Registered Patients
+- Responsive User Interface
+- Secure Database Connection
+- Environment Variable Support
+- Database Fetch Operation
+
+---
+
+# 🛠️ Technologies Used
+
+### Frontend
+
+- HTML5
+- CSS3
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- MongoDB
+- Mongoose
+
+### Other Packages
+
+- dotenv
+
+---
+
+# 📁 Project Structure
+
+```
+Hospital-Management-project
+│
+├── app.js
+├── index.html
+├── style.css
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── README.md
+└── .env (Not Uploaded)
 ```
 
 ---
 
-### 📸 Execution Flow & UI State Outputs
+# 📂 Database
 
-1. **The Patient Intake Portal (`/`):** Users interact with an isolated, floating glass panel centered against an active colorful backdrop. Interactive text boxes switch border values upon selection to draw user focus.
-2. **The Execution Voucher (`/register`):** Hitting submission re-routes the browser instance to a sleek, top-bordered feedback module confirming registration isolation before exposing a link to route users home.
-3. **The Data Terminal Logs (`/students`):** Compiles flat strings straight out of your log registry file directly into a clean, text-wrapped terminal viewing window. Features a conditional fail-safe module to direct users back home if no files exist yet.
+Database Name
 
----
+```
+hospitalDB
+```
 
-### 🛠 Technical Specifications Stack
+Collection Name
 
-* **Frontend Layouts:** HTML5 Semantic Structure, CSS3 Custom Properties, Flexbox grids, Backdrop Filters.
-* **Server Architecture:** Node.js runtime, Express.js micro-framework architecture, URL-Encoded data parsers.
-* **Data Layer Engine:** Synchronous stream routing managed directly by the asynchronous Node `fs` library.
+```
+patients
+```
 
----
+Stored Fields
 
-### ⚙️ Local Deployment Workflow
-
-Follow these simple commands to initialize and execute this full-stack environment on your local system:
-
-1. Clone the project files to your desktop workspace directory.
-2. Launch a command terminal pointing inside the project root and run your initial packaging configurations:
-   ```bash
-   npm install
-   ```
-3. Initialize the development environment on the local port mapping:
-   ```bash
-   node server.js
-   ```
-4. Fire up any modern web browser instance and open: `http://localhost:5000`
+- Patient Name
+- Patient Age
+- Contact Number
+- Admission Date
+- Illness
 
 ---
 
-### 👨‍💻 Engineering Credits
+# 🌐 Application Routes
 
-Designed and programmed with clean code practices by **Jayanti Mishra**
+| Route | Method | Description |
+|--------|--------|-------------|
+| / | GET | Open Registration Form |
+| /register | POST | Save Patient Details |
+| /patients | GET | Fetch and Display Registered Patients |
 
 ---
 
-### 🌟 Support This Repository
+# 🔒 Environment Variables
 
-If this glassmorphic layout layout sparked structural ideas for your next web interface project, or if you found the flat-file backend implementation helpful, please take a second to hit the **Star (⭐) button** up in the top right corner! Happy coding! 🚀 top right corner! Keep coding! 🚀
+MongoDB connection string is stored securely inside the `.env` file.
+
+Example:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+The `.env` file is ignored using `.gitignore`.
+
+---
+
+# 📦 Installation
+
+Install Dependencies
+
+```bash
+npm install
+```
+
+Install Required Packages
+
+```bash
+npm install express mongoose dotenv
+```
+
+Run Project
+
+```bash
+node app.js
+```
+
+Open Browser
+
+```
+http://localhost:5000
+```
+
+---
+
+# 📊 MongoDB Operations Used
+
+### Create
+
+```javascript
+patient.save();
+```
+
+### Read (Fetch)
+
+```javascript
+Patient.find();
+```
+
+---
+
+# 🎯 Project Outcome
+
+The project successfully migrates patient data storage from a traditional text file system to MongoDB.
+
+This improves:
+
+- Data Security
+- Scalability
+- Maintainability
+- Database Management
+- Real-Time Data Retrieval
+
+---
+
+# 👩‍💻 Developed By
+
+**Jayanti Mishra**
+
+B.Tech (Information Technology)
+
+---
+
+⭐ Thank you for visiting this repository.
