@@ -161,8 +161,22 @@ const patients = await Patient.find();
 
 **Jayanti Mishra**
 
-B.Tech Computer Science
+**B.Tech – Information Technology**
 
 ---
 
-### ⭐ If you found this project useful, don't forget to star the repository.
+## 🌟 Acknowledgement
+
+This project was developed as part of academic learning to understand full-stack web development and database integration using MongoDB. It demonstrates the migration of a traditional file-based storage system to a modern NoSQL database solution.
+
+---
+
+## 📬 Feedback
+
+Suggestions and feedback are always welcome. Feel free to explore the project and share your thoughts for further improvements.
+
+---
+
+### ⭐ If you found this project helpful, consider giving it a Star!
+
+Thank you for visiting this repository. Happy Coding! 🚀
