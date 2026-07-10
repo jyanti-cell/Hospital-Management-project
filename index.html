@@ -1,33 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Patient Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital</title>
+
     <link rel="stylesheet" href="/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-    <h1>Hospital Patient Registration Form</h1>
 
-    <form action="/register" method="POST">
-        <label>Patient Name</label>
-        <input type="text" name="patientName" required>
+<header>
 
-        <label>Patient Age</label>
-        <input type="number" name="patientAge" required>
+    <div class="logo">
+        <i class="fa-solid fa-hospital"></i>
+        <span>CityCare Hospital</span>
+    </div>
 
-        <label>Contact Number</label>
-        <input type="tel" name="contactNo" required>
+</header>
 
-        <label>Date of Admission</label>
-        <input type="date" name="admissionDate" required>
+<section class="hero">
 
-        <label>Illness Name</label>
-        <input type="text" name="illness" required>
+    <div class="overlay"></div>
 
-        <button type="submit">Register Patient</button>
-    </form>
+    <div class="hero-content">
 
-    <br>
+        <h1>Patient Registration Portal</h1>
 
-    <a class="view-link" href="/patients">View Registered Patients</a>
+        <p>
+            Trusted Healthcare with Modern Technology.
+            Register patients quickly and securely.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+<div class="left">
+
+    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=900"
+    alt="Hospital">
+
+    <div class="info">
+
+        <div class="card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>100+ Doctors</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-bed-pulse"></i>
+            <h3>24×7 Emergency</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Advanced Care</h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="right">
+
+<form action="/register" method="POST">
+
+<h2>Register Patient</h2>
+
+<label>Patient Name</label>
+<input type="text" name="patientName" required>
+
+<label>Patient Age</label>
+<input type="number" name="patientAge" required>
+
+<label>Contact Number</label>
+<input type="tel" name="contactNo" required>
+
+<label>Date of Admission</label>
+<input type="date" name="admissionDate" required>
+
+<label>Illness Name</label>
+<input type="text" name="illness" required>
+
+<button type="submit">
+<i class="fa-solid fa-user-plus"></i>
+Register Patient
+</button>
+</form>
+<a class="view-link" href="/patients">
+<i class="fa-solid fa-users"></i>
+View Registered Patients
+</a>
+</div>
+</section>
+<footer>
+© 2026 CityCare Hospital | Patient Management System
+</footer>
 </body>
 </html>
